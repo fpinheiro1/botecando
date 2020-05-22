@@ -3,7 +3,18 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  
+  firebase: { apiKey: "AIzaSyC1LM7D6cffHnl9XmsCpshnig40W_VCRBA",
+  authDomain: "botecando-db278.firebaseapp.com",
+  databaseURL: "https://botecando-db278.firebaseio.com",
+  projectId: "botecando-db278",
+  storageBucket: "botecando-db278.appspot.com",
+  messagingSenderId: "611255045564",
+  appId: "1:611255045564:web:69ea0a66c7d7ee4f2fafb9",
+  measurementId: "G-4W3R07NVRE"}
+
+  
 };
 
 /*

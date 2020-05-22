@@ -18,9 +18,117 @@
 @import "~@ionic/angular/css/typography.css";
 @import '~@ionic/angular/css/display.css';
 
+
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
 @import "~@ionic/angular/css/float-elements.css";
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+.toolbar-color{
+              
+    --ion-background-color:#590000;
+    --ion-toolbar-color:#ffffff;
+
+    background-origin: padding-box;
+   
+
+    .item{
+        opacity: 100%;
+        } 
+          
+}
+
+.textotoolbar{
+    --ion-text-color:#ffffff;
+      opacity: 60%;
+      align-items: center; 
+
+} 
+
+.btcategoriacardapio{
+    
+    background-color:#590000;
+    border-color:#ffffff;
+    border-style: groove;
+opacity: 60%;
+color:#ffffff;
+
+    } 
+
+.btsubcategoriacardapio{
+    --background:#590000;
+    
+    border-style: groove;
+opacity: 80%;
+
+ }
+ 
+ .textobtsubcategoria {
+  
+      
+opacity: 80%;
+
+ }
+    
+.fundosubcategoria {
+    
+    --ion-background-color:#590000;
+}
+
+.toolbar-color-categoria{
+    --ion-background-color:#590000;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+.toolbar-color-subcategoria{
+    --background:#ffffff;
+    opacity:100%;
+    
+}
+.corpo {
+    --background:#ffffff;
+    opacity:100%;
+}
+
+.itemcardapio {
+
+    
+    border-collapse: separate;
+    border-color:#590000;
+
+    border-top-left-radius:30px;
+    border-end-end-radius: 30px;
+    color: #ffffff;
+   
+    border-left-style: groove;
+    border-bottom-style: groove;
+
+    --background:#590000;
+
+    opacity:60%;
+    .labeltitulo{
+        background-color:#590000;
+     
+    }
+ }
+
+
+.btdetalhes {
+    background-color:#590000;
+    text-decoration-color: initial;
+    color: #ffffff;
+    
+
+}
+
+.btlogin {
+    border-radius: 15%;
+    --background:#590000;
+        opacity:80%;
+    color: rgba(255, 255, 255, 0.623);
+}
+
+

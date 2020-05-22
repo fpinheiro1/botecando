@@ -1,0 +1,132 @@
+<app-header titulo= "Menu Principal"></app-header>
+<div><ion-toolbar class="red"><ion-title>Aqui Será o Menu Principal</ion-title></ion-toolbar></div>
+
+<ion-content>
+
+<ion-button class="btlogin" routerLink="/cardapiocomidas">Cardapio</ion-button>
+<ion-button class="btlogin" routerLink="/publicar-bebidas">Publicar Produto</ion-button>
+<ion-button class="btlogin" (click)="logout()">Sair</ion-button>
+<!--
+  <ion-slides>
+<ion-slide class="red">
+  
+<ion-chip (click)="selecionarCriterio('Comidas')">
+  <ion-icon name="flame-outline" color="dark"></ion-icon>
+  <ion-label>Comidas</ion-label>
+</ion-chip>  
+
+  <ion-chip collapse="true" (click)="selecionarCriterio('Bebidas')">
+    <ion-icon name="wine-outline"></ion-icon>
+    <ion-label>Bebidas</ion-label>
+  </ion-chip>
+
+  <ion-chip (click)="selecionarCriterio('Sobremesas')">
+    <ion-icon name="restaurant-outline" color="dark"></ion-icon>
+    <ion-label>Sobremesas</ion-label>
+  </ion-chip>
+     
+  
+ 
+  <ion-icon name="chevron-forward-outline"></ion-icon>
+      
+</ion-slide> 
+     
+
+<ion-slide>
+  
+<ion-buttons slot="start">
+  <ion-icon name="chevron-back-outline"></ion-icon>
+
+  <ion-chip (click)="logout()">
+    <ion-icon name="heart-outline" color="dark"></ion-icon>
+    <ion-label>Favoritos</ion-label>
+     </ion-chip>
+
+  
+
+  <ion-chip>
+    <ion-icon name="location-outline" color="dark"></ion-icon>
+    <ion-label>Proximos</ion-label>
+  </ion-chip>
+
+  <ion-chip>
+    <ion-icon name="star-outline" color="dark"></ion-icon>
+    <ion-label>Destaques</ion-label>
+  </ion-chip>
+</ion-buttons>
+
+  </ion-slide>
+</ion-slides>
+
+</ion-toolbar></div>
+
+<ion-content class='red' >
+
+  <div class="texto">Texto</div>
+
+
+<span *ngFor="let publi of publicacao">
+  <span *ngIf="selecionarSubCategoria(publi)"></span>
+  <div *ngIf="publi.categoria == criterio">
+
+    <div *ngIf="publi.subcategoria==subcategoria"> 
+    
+  
+  
+
+
+  
+ 
+   
+
+<ion-list >
+  <ion-item-sliding *ngFor="let publi2 of publicacao">
+    <ion-item *ngIf="publi2.subcategoria==subcategoria">
+      <ion-label></ion-label><br>
+      <ion-label>{{publi2.subtitulo}}</ion-label>
+      <ion-label>{{publi2.descricao}}</ion-label>
+    </ion-item>
+    <ion-item-options side="end">
+      <ion-item-option (click)="deletePublicacao(publi.id)">Unread</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+  </ion-list>
+</div> 
+</div>
+</span>
+
+-->
+
+<!-- <div *ngFor="let publi of publicacao">
+  
+
+   
+<ion-card *ngIf="publi.categoria == criterio">
+  <ion-card-header >
+    <ion-card-subtitle>{{publi.titulo}}</ion-card-subtitle>
+    <ion-card-title>{{publi.subtitulo}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+   {{publi.descricao}}
+   <br>
+   {{publi.id}}
+   <br>
+   {{publi.uid}}
+   
+   
+    <ion-item-option color="danger" (click)="deletePublicacao(publi.id)">
+      <ion-icon slot="top" name="trash"></ion-icon>
+      Excluir
+    </ion-item-option>
+
+  
+   
+  </ion-card-content>
+
+</ion-card> 
+</div> -->
+
+</ion-content> 
+
