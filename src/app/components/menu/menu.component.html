@@ -1,6 +1,6 @@
 <ion-menu side="start" menu-id="first" content-id="main" contentId="principal">
   <ion-header>
-    <ion-toolbar color="primary">
+    <ion-toolbar color="tertiary">
 
       <!-- Botão Fechar Menu-->
       <ion-buttons slot="start">
@@ -11,17 +11,42 @@
 
       <!--Estrutura do Menu-->
       
-      <ion-title>Menu Principal</ion-title>
+      <ion-title>Menu | Usuário</ion-title>
     </ion-toolbar>
   </ion-header>
+
   <ion-content>
     <ion-list>
-      <ion-item>Promoções</ion-item>
-      <ion-item>Cardapio</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
+      <ion-item>
+        <ion-icon name="cart" slot="start"></ion-icon>
+        Promoções
+      </ion-item>
+      <ion-item>
+        <ion-icon name="restaurant" slot="start"></ion-icon>
+        Cardapios
+      </ion-item>
+      <ion-item>
+        <ion-icon name="fast-food" slot="start"></ion-icon>
+        Produtos
+      </ion-item>
+      <ion-item>
+        <ion-icon name="star" slot="start"></ion-icon>
+        Filiais
+      </ion-item>
+      <ion-item>
+        <ion-icon name="receipt" slot="start"></ion-icon>
+        Avaliação
+      </ion-item>
+      <ion-item>
+        <ion-icon name="mail" slot="start"></ion-icon>
+        Contato
+      </ion-item>
+      <ion-item>
+        <ion-icon name="close" slot="start"></ion-icon>
+        Sair
+      </ion-item>
     </ion-list>
   </ion-content>
+
 </ion-menu>
 
