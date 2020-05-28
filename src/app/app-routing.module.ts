@@ -14,15 +14,7 @@ const routes: Routes = [
     path: 'login',  loadChildren:'./pages/login/login.module#LoginPageModule', canActivate:[LoginGuard]
   },
 
-  {
-    path: 'alert',
-    loadChildren: () => import('./pages/alert/alert.module').then( m => m.AlertPageModule)
-  },
-  {
-    path: 'action-sheet',
-    loadChildren: () => import('./pages/action-sheet/action-sheet.module').then( m => m.ActionSheetPageModule)
-  },
-  
+    
   {
     path: 'publicacao-detalhes',
     loadChildren: () => import('./pages/publicacao-detalhes/publicacao-detalhes.module').then(m=>m.PublicacaoDetalhesPageModule)

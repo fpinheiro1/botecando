@@ -1,0 +1,27 @@
+<ion-menu side="start" menu-id="first" content-id="main" contentId="principal">
+  <ion-header>
+    <ion-toolbar color="primary">
+
+      <!-- Botão Fechar Menu-->
+      <ion-buttons slot="start">
+        <ion-button (click)="closeMenu()" >
+          <ion-icon slot="icon-only" name="menu"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+      <!--Estrutura do Menu-->
+      
+      <ion-title>Menu Principal</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>Promoções</ion-item>
+      <ion-item>Cardapio</ion-item>
+      <ion-item>Menu Item</ion-item>
+      <ion-item>Menu Item</ion-item>
+      <ion-item>Menu Item</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+

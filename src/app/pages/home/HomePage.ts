@@ -3,7 +3,7 @@ import { PublicacaoService } from './../../services/publicacao.service';
 import { Publicacao } from './../../interfaces/publicacao';
 import { Http } from '@angular/http';
 import { Component, OnInit, SystemJsNgModuleLoaderConfig } from '@angular/core';
-import { NavController, ToastController, LoadingController } from '@ionic/angular';
+import { NavController, ToastController, LoadingController, MenuController } from '@ionic/angular';
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -31,7 +31,8 @@ export class HomePage implements OnInit {
 
    
 
-  constructor(public navCtrl: NavController,
+  constructor(private menu: MenuController,
+    public navCtrl: NavController,
      public http: Http,
      private authService: AuthService,
     private loadingCtrl: LoadingController,
@@ -43,6 +44,10 @@ export class HomePage implements OnInit {
   }
 
   ngOnInit() { }
+
+ toggleMenu(){
+   this.menu.toggle();
+ }
 
   ngOnDestroy() {  
     this.publicacaoSubscription.unsubscribe();

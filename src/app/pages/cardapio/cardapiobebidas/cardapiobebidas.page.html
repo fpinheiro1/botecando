@@ -26,7 +26,8 @@
   
     <ion-slides >
       <ion-slide  >
-  
+ <!-- Botões Para Selecionar o tipo da bebida, Chama a função selecionarCriterio,
+      para alterar a variavel criterio e subcategoria  --> 
 
   <ion-chip (click)="selecionarCriterio('Bebidas','Cerveja')" class="btsubcategoriacardapio">
     <ion-icon name="heart-outline" color={{corbotaocerveja}}></ion-icon>
@@ -54,7 +55,9 @@
 <ion-content class="corpo">
 
 
-<!-- List of Sliding Items -->
+<!-- Imprime na Tela  uma Ion-List de todos as publicaçoes (produtos),
+que a sub categoria é igual a variavel subcriterio. Essa variavel altera,
+de acordo com a funçao selecionarCriterio() -->
 
 <span *ngFor="let publi of publicacao">
   
@@ -80,34 +83,6 @@
 </ion-content>
 
 
-<!-- <div *ngFor="let publi of publicacao">
-  
 
-   
-<ion-card *ngIf="publi.categoria == criterio">
-  <ion-card-header >
-    <ion-card-subtitle>{{publi.titulo}}</ion-card-subtitle>
-    <ion-card-title>{{publi.subtitulo}}</ion-card-title>
-  </ion-card-header>
-
-  <ion-card-content>
-   {{publi.descricao}}
-   <br>
-   {{publi.id}}
-   <br>
-   {{publi.uid}}
-   
-   
-    <ion-item-option color="danger" (click)="deletePublicacao(publi.id)">
-      <ion-icon slot="top" name="trash"></ion-icon>
-      Excluir
-    </ion-item-option>
-
-  
-   
-  </ion-card-content>
-
-</ion-card> 
-</div> -->
  
 

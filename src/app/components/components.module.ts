@@ -4,20 +4,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { MenuComponent } from './menu/menu.component';
 
 
 
 @NgModule({
-  declarations: [HeaderComponent],
+  declarations: [HeaderComponent,MenuComponent],
   exports:[
-  HeaderComponent
+  HeaderComponent,
+  MenuComponent
   ],
   
   
   imports: [
     IonicModule,
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,    
     
   ]
 })
