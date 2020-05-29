@@ -34,7 +34,11 @@ const routes: Routes = [
   {
     path: 'cardapiocomidas',
     loadChildren: () => import('./pages/cardapio/cardapiocomidas/cardapiocomidas.module').then( m => m.CardapiocomidasPageModule)
+  },  {
+    path: 'avaliacao',
+    loadChildren: () => import('./pages/avaliacao/avaliacao.module').then( m => m.AvaliacaoPageModule)
   },
+
  
   
 ];

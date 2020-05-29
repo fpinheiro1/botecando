@@ -1,0 +1,47 @@
+app ADM 01
+
+    - login
+        
+    - PROMOCOES
+        - inserir promocao
+        - conultar
+        - excluir
+    - CARDAPIOS
+        - inserir cardapio
+        - consultar
+        - excluir
+    - PRODUTOS
+        - inserir produto
+        - consultar
+        - excluir
+    - FILIAIS
+        - inserir produto
+        - consultar
+        - excluir
+    - USUARIO
+        - inserir produto
+        - consultar
+        - excluir
+    - contato
+    - sair
+
+app CLIENTE 02
+
+    LOGIN
+
+    - PROMOCOES 
+        - visualizar
+    - CARDAPIO
+        - bebidas
+            - visualizar
+        - comidas
+            - visualizar
+    - FILIAIS
+        - visualizar
+    - PESQUISA
+        - visualizar
+    - CONTATO
+
+
+
+    - 
