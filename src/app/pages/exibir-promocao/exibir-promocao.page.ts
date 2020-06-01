@@ -1,35 +1,30 @@
-import { HeaderComponent } from './../../components/header/header.component';
-
-import { Http } from '@angular/http';
-import { Component, OnInit, SystemJsNgModuleLoaderConfig } from '@angular/core';
-import { NavController, ToastController, LoadingController, MenuController } from '@ionic/angular';
+import { Promocao } from './../../interfaces/promocao';
+import { Component, OnInit } from '@angular/core';
+import { HeaderComponent } from 'src/app/components/header/header.component';
 import { Subscription } from 'rxjs';
+
+import { NavController, LoadingController, ToastController } from '@ionic/angular';
+import { Http } from '@angular/http';
 import { AuthService } from 'src/app/services/auth.service';
-import { Promocao } from 'src/app/interfaces/promocao';
 import { PromocaoService } from 'src/app/services/promocao.service';
 
 
+
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.page.html',
-  styleUrls: ['./home.page.scss'],
+  selector: 'app-exibir-promocao',
+  templateUrl: './exibir-promocao.page.html',
+  styleUrls: ['./exibir-promocao.page.scss'],
 })
-export class HomePage implements OnInit {
-    
-  
+export class ExibirPromocaoPage implements OnInit {
   private loading: any;
-  private promocaoId: string = null;
+  public cordestaque: string;
   public promocao = new Array<Promocao>();
   private promocaoSubscription: Subscription;
   public categoria = 'Promoção';
   public criterioHeader:HeaderComponent;
-  
-  
 
-   
-
-  constructor(private menu: MenuController,
-    public navCtrl: NavController,
+  
+  constructor(public navCtrl: NavController,
     public http: Http,
     private authService: AuthService,
     private loadingCtrl: LoadingController,
@@ -46,12 +41,17 @@ export class HomePage implements OnInit {
     this.promocaoSubscription.unsubscribe();
    }
 
-   toggleMenu(){
-    this.menu.toggle();
-  }
+ 
   
   tornarDestaque(id,a:Promocao){
-        a.destaque = "sim";
+        if (a.destaque=="sim"){
+        a.destaque = "não";
+        a.textobotaodedestaque="Destacar";
+        }else {
+          a.destaque="sim";
+          a.textobotaodedestaque="Remover Destaque";
+        }
+
         this.promocaoService.updatePromocao(a.id,a);
   }
  
@@ -59,6 +59,7 @@ export class HomePage implements OnInit {
     //Array promocao recebendo os dados do banco.
     this.promocaoSubscription = this.promocaoService.getPromocoes().subscribe(data => {
     this.promocao = data;
+    
 
     
     // Ordernando o array pelo titulo

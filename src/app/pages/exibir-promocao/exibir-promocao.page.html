@@ -1,0 +1,38 @@
+<app-header titulo= "Promoções"></app-header>
+
+<div></div>
+
+<div>
+   <ion-toolbar class="toolbar-color-categoria" >
+   </ion-toolbar>
+
+ </div> 
+
+<ion-content>
+
+  <span *ngFor="let promo of promocao">
+  
+    <div *ngIf="promo.categoria==categoria">
+     
+  
+  <ion-list>
+    <ion-item-sliding>
+      <ion-item class="itemcardapio">
+        <ion-label >{{promo.titulo}}</ion-label><br>
+        <ion-label >{{promo.subtitulo}}</ion-label>
+        <ion-label >{{promo.descricao}}</ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option class="btdestaque" (click)="tornarDestaque(promo.id,promo)" background-color="success" >{{promo.textobotaodedestaque}}</ion-item-option>
+        <ion-item-option class="btexcluir" (click)="deletePromocao(promo.id)">Excluir</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+    
+  
+    </ion-list>
+    </div>
+  </span>
+  
+  </ion-content>
+
+

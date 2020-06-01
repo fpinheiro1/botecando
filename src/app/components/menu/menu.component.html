@@ -1,6 +1,6 @@
 <ion-menu side="start" menu-id="first" content-id="main" contentId="principal">
   <ion-header>
-    <ion-toolbar color="tertiary">
+    <ion-toolbar class="toolbar-color">
 
       <!-- Botão Fechar Menu-->
       <ion-buttons slot="start">
@@ -11,17 +11,17 @@
 
       <!--Estrutura do Menu-->
       
-      <ion-title>Menu | Usuário</ion-title>
+      <ion-title class=textotoolbar>Menu | Usuário</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content>
     <ion-list>
-      <ion-item>
+      <ion-item Href="/exibir-promocao">
         <ion-icon name="cart" slot="start"></ion-icon>
         Promoções
       </ion-item>
-      <ion-item>
+      <ion-item Href="/cardapiocomidas">
         <ion-icon name="restaurant" slot="start"></ion-icon>
         Cardapios
       </ion-item>
@@ -41,10 +41,26 @@
         <ion-icon name="mail" slot="start"></ion-icon>
         Contato
       </ion-item>
-      <ion-item>
+      <ion-item (onClick)="logout()">
         <ion-icon name="close" slot="start"></ion-icon>
         Sair
       </ion-item>
+
+      <!--Modo Admin--> 
+    
+      <ion-item Href="/publicar-bebidas">
+        <ion-icon name="close" slot="start"></ion-icon>
+        Publicar Bebidas
+      </ion-item>
+      <ion-item Href="/publicar-comidas">
+        <ion-icon name="close" slot="start"></ion-icon>
+        Publicar Comida
+      </ion-item>
+      <ion-item Href="/publicar-promocao">
+        <ion-icon name="close" slot="start"></ion-icon>
+        Publicar Promoção
+      </ion-item>
+    
     </ion-list>
   </ion-content>
 

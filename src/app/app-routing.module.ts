@@ -38,6 +38,14 @@ const routes: Routes = [
     path: 'avaliacao',
     loadChildren: () => import('./pages/avaliacao/avaliacao.module').then( m => m.AvaliacaoPageModule)
   },
+  {
+    path: 'publicar-promocao',
+    loadChildren: () => import('./pages/publicar-promocao/publicar-promocao.module').then( m => m.PublicarPromocaoPageModule)
+  },
+  {
+    path: 'exibir-promocao',
+    loadChildren: () => import('./pages/exibir-promocao/exibir-promocao.module').then( m => m.ExibirPromocaoPageModule)
+  },
 
  
   

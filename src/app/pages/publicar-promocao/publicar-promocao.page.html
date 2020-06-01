@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Adicionar Promoção</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+ 
+  <ion-list  >  
+
+    
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="promocao.titulo" placeholder="Titulo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="promocao.subtitulo" placeholder="Subtitulo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="promocao.urlfoto" placeholder="Foto"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="promocao.descricao" placeholder="Descrição"></ion-input>
+    </ion-item>
+    
+   
+      
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="saveProduct()" expand="block">
+      Salvar Promoção
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
+

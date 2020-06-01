@@ -38,10 +38,18 @@
     .item{
         opacity: 100%;
         } 
-          
+    
+   
 }
 
 .textotoolbar{
+    --ion-text-color:#ffffff;
+      opacity: 60%;
+      align-items: center; 
+
+} 
+
+.textotoolbarhome2{
     --ion-text-color:#ffffff;
       opacity: 60%;
       align-items: center; 
@@ -80,6 +88,7 @@ opacity: 80%;
 
 .toolbar-color-categoria{
     --ion-background-color:#590000;
+    --ion-toolbar-color:#ffffff;
     border-bottom-left-radius: 20%;
     border-bottom-right-radius: 20%;
 }
@@ -116,9 +125,13 @@ opacity: 80%;
  }
 
 
-.btdetalhes {
-    background-color:#590000;
-    text-decoration-color: initial;
+.btexcluir {
+    background-color:red;
+     color: #ffffff;
+}
+
+.btdestaque {
+    background-color:green;
     color: #ffffff;
     
 
