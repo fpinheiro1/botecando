@@ -1,57 +1,86 @@
 <ion-header>
-  
-  <ion-toolbar class="toolbar-color">
-   
-  <ion-buttons slot="start">
-  <ion-button (click)="toggleMenu()" >
-    <ion-icon slot="icon-only" name="menu"></ion-icon>
-  </ion-button>
-    <ion-title class="textotoolbar"> Inicio</ion-title>
- 
-        
-     </ion-buttons>
-    </ion-toolbar >
 
-    
-      <ion-toolbar class="toolbar-color-categoria">
-        <ion-title class="textotoolbarhome2">Promoções em Destaque</ion-title>
-      </ion-toolbar>
-   
-    
-     
+  <ion-toolbar class="toolbar-color">
+
+    <ion-buttons slot="start">
+      <ion-button (click)="toggleMenu()">
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+      <ion-title class="textotoolbar"> Inicio</ion-title>
+
+    </ion-buttons>
+  </ion-toolbar>
+
+
+  <ion-toolbar class="toolbar-color-categoria">
+    <ion-title class="textotoolbarhome2">Promoções em Destaque</ion-title>
+  </ion-toolbar>
+
 </ion-header>
 
-<div><ion-toolbar class="red"><ion-title>Aqui Será o Menu Principal - Teste</ion-title></ion-toolbar></div>
+<div>
+  <ion-toolbar class="red">
+    <ion-title>Aqui Será o Menu Principal</ion-title>
+  </ion-toolbar>
+</div>
 
 <ion-content>
 
   <ion-content>
 
     <span *ngFor="let promo of promocao">
-    
+
       <div *ngIf="promo.destaque=='sim'">
-       
-    
-    <ion-list>
-      <ion-item-sliding>
-        <ion-item class="itemcardapio">
-          <ion-label >{{promo.titulo}}</ion-label><br>
-          <ion-label >{{promo.subtitulo}}</ion-label>
-          <ion-label >{{promo.descricao}}</ion-label>
-        </ion-item>
-        <ion-item-options side="end">
-          <ion-item-option class="btdetalhes" (click)="tornarDestaque(promo.id,promo)">Destacar</ion-item-option>
-          <ion-item-option class="btdetalhes" (click)="deletePromocao(promo.id)">Excluir</ion-item-option>
-        </ion-item-options>
-      </ion-item-sliding>
-      
-    
-      </ion-list>
+
+
+        <ion-list>    
+
+          <!-- ADICIONADO UM CARTAO PARA APARECER NO FORMATO DE LISTA -->
+
+        <ion-card>
+
+          <!-- FOTO DO CARDAPIO OU PRODUTO EM PROMOCAO -->
+          <img src="https://source.unsplash.com/random/400x100" alt=""> 
+
+          <!-- ITENS DA LISTA -->
+          <ion-item>
+            
+            <!-- TITULO DA PROMOCAO -->
+            <ion-label>{{promo.titulo}}</ion-label>
+            <!-- BOTAO PARA ABRIR UM POPUP E VISUALIZAR DETALHES DA PROMOCAO -->
+            <ion-button fill="clear" color="primary" slot="end" (click)="tornarDestaque(promo.id,promo)" >View</ion-button>
+          </ion-item>
+        
+          <ion-card-content>
+
+            <!-- DESCRICAO DA PROMOCAO -->
+            <ion-label>{{promo.descricao}}</ion-label>
+
+          </ion-card-content>
+        </ion-card>
+                  
+         <!--  <ion-item-sliding>
+
+            <ion-item class="itemcardapio">
+              <ion-label>{{promo.titulo}}</ion-label><br>
+              <ion-label>{{promo.subtitulo}}</ion-label>
+              <ion-label>{{promo.descricao}}</ion-label>
+            </ion-item>
+
+            <ion-item-options side="end">
+              <ion-item-option class="btdetalhes" (click)="tornarDestaque(promo.id,promo)">Destacar</ion-item-option>
+              <ion-item-option class="btdetalhes" (click)="deletePromocao(promo.id)">Excluir</ion-item-option>
+            </ion-item-options>
+
+          </ion-item-sliding>
+ -->
+
+        </ion-list>
       </div>
     </span>
-    
-    </ion-content>
-<!--
+
+  </ion-content>
+  <!--
 <ion-button class="btlogin" routerLink="/cardapiocomidas">Cardapio</ion-button>
 <ion-button class="btlogin" routerLink="/publicar-bebidas">Publicar Produto</ion-button>
 <ion-button class="btlogin" color="primary" expand="full" routerLink="/avaliacao">Avaliacao</ion-button>
@@ -60,5 +89,4 @@
 <ion-button class="btlogin" routerLink="/exibir-promocao">Publicar Promoção</ion-button>
 -->
 
-</ion-content> 
-
+</ion-content>
