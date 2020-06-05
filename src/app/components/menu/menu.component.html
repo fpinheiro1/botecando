@@ -4,14 +4,13 @@
 
       <!-- Botão Fechar Menu-->
       <ion-buttons slot="start">
-        <ion-button (click)="closeMenu()" >
+        <ion-button (click)="closeMenu()">
           <ion-icon slot="icon-only" name="menu"></ion-icon>
         </ion-button>
       </ion-buttons>
 
       <!--Estrutura do Menu-->
-      
-      <ion-title class=textotoolbar>Menu | Usuário</ion-title>
+      <ion-title class=textotoolbar>Menu | ADM</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -25,7 +24,7 @@
 
       <ion-item Href="/cardapiocomidas">
         <ion-icon name="restaurant" slot="start"></ion-icon>
-        Cardapios
+        Cardápios
       </ion-item>
 
       <ion-item href="/produtos">
@@ -37,19 +36,19 @@
         <ion-icon name="star" slot="start"></ion-icon>
         Filiais
       </ion-item>
-      
-      <ion-item>
+
+      <ion-item href="/contato" >
         <ion-icon name="mail" slot="start"></ion-icon>
         Contato
       </ion-item>
-      
+
       <ion-item (onClick)="logout()">
         <ion-icon name="close" slot="start"></ion-icon>
         Sair
       </ion-item>
 
-      <!--Modo Admin--> 
-    
+      <!--Modo Admin-->
+
       <ion-item Href="/publicar-bebidas">
         <ion-icon name="close" slot="start"></ion-icon>
         Publicar Bebidas
@@ -62,9 +61,8 @@
         <ion-icon name="close" slot="start"></ion-icon>
         Publicar Promoção
       </ion-item>
-    
+
     </ion-list>
   </ion-content>
 
 </ion-menu>
-

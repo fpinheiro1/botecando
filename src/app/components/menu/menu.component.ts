@@ -1,34 +1,33 @@
-import { Component, OnInit } from '@angular/core';
-import { MenuController, LoadingController } from '@ionic/angular';
-import { async } from 'rxjs/internal/scheduler/async';
-import { AuthService } from 'src/app/services/auth.service';
+import { Component, OnInit } from "@angular/core";
+import { MenuController, LoadingController } from "@ionic/angular";
+import { async } from "rxjs/internal/scheduler/async";
+import { AuthService } from "src/app/services/auth.service";
 
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss'],
+  selector: "app-menu",
+  templateUrl: "./menu.component.html",
+  styleUrls: ["./menu.component.scss"],
 })
 export class MenuComponent implements OnInit {
-
   loading: any;
 
-  constructor(private menu: MenuController,
+  constructor(
+    private menu: MenuController,
     private authService: AuthService,
-    private loadingCtrl: LoadingController) {}
+    private loadingCtrl: LoadingController
+  ) {}
 
   //funçao para fechar o menu
-  
-  closeMenu(){
+
+  closeMenu() {
     this.menu.close();
   }
 
   ngOnInit() {}
 
-
-
-async presentLoading() {
-  this.loading = await this.loadingCtrl.create({ message: 'Aguarde...' });
-  return this.loading.present();
+  async presentLoading() {
+    this.loading = await this.loadingCtrl.create({ message: "Aguarde..." });
+    return this.loading.present();
   }
 
   async logout() {
@@ -42,5 +41,4 @@ async presentLoading() {
       this.loading.dismiss();
     }
   }
-
 }
