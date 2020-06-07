@@ -87,7 +87,23 @@ const routes: Routes = [
   {
     path: 'filiais',
     loadChildren: () => import('./pages/filiais/filiais.module').then( m => m.FiliaisPageModule)
+  },  {
+    path: 'home-usuario',
+    loadChildren: () => import('./pages/modousuario/home-usuario/home-usuario.module').then( m => m.HomeUsuarioPageModule)
   },
+  {
+    path: 'cardapio-bebidas-usuario',
+    loadChildren: () => import('./pages/modousuario/cardapio-bebidas-usuario/cardapio-bebidas-usuario.module').then( m => m.CardapioBebidasUsuarioPageModule)
+  },
+  {
+    path: 'cardapio-comidas-usuario',
+    loadChildren: () => import('./pages/modousuario/cardapio-comidas-usuario/cardapio-comidas-usuario.module').then( m => m.CardapioComidasUsuarioPageModule)
+  },
+  {
+    path: 'promocao-usuario',
+    loadChildren: () => import('./pages/modousuario/promocao-usuario/promocao-usuario.module').then( m => m.PromocaoUsuarioPageModule)
+  },
+
 
 ];
 

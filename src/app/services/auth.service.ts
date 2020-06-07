@@ -18,6 +18,7 @@ export class AuthService {
   }
   getAuth(){ 
     return this.afa.auth;
+    
 
   }
 
@@ -26,5 +27,4 @@ export class AuthService {
     
     }
 
-  
-}
+  }

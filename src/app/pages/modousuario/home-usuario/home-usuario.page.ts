@@ -1,4 +1,3 @@
-import { HeaderComponent } from './../../components/header/header.component';
 
 import { Http } from '@angular/http';
 import { Component, OnInit, SystemJsNgModuleLoaderConfig } from '@angular/core';
@@ -7,16 +6,14 @@ import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
 import { Promocao } from 'src/app/interfaces/promocao';
 import { PromocaoService } from 'src/app/services/promocao.service';
-
+import { HeaderComponent } from 'src/app/components/header/header.component';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.page.html',
-  styleUrls: ['./home.page.scss'],
+  selector: 'app-home-usuario',
+  templateUrl: './home-usuario.page.html',
+  styleUrls: ['./home-usuario.page.scss'],
 })
-export class HomePage implements OnInit {
-    
-  
+export class HomeUsuarioPage implements OnInit {
   private loading: any;
   private promocaoId: string = null;
   public promocao = new Array<Promocao>();
@@ -40,15 +37,14 @@ export class HomePage implements OnInit {
 
   }
 
-  ngOnInit() {this.menuAdmin(); }
+  ngOnInit() { this.menuUsuario(); }
+
+  menuUsuario() {
+    this.menu.enable(true, 'usuario'); }
 
   ngOnDestroy() {  
     this.promocaoSubscription.unsubscribe();
    }
-
-   menuAdmin() {
-    this.menu.enable(true, 'admin');
-  }
 
    toggleMenu(){
     this.menu.toggle();

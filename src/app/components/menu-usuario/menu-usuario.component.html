@@ -1,4 +1,4 @@
-<ion-menu side="start" menu-id="admin" content-id="main" contentId="principal">
+<ion-menu side="start" menu-id="usuario" content-id="main" contentId="principal">
   <ion-header>
     <ion-toolbar class="toolbar-color">
 
@@ -10,47 +10,39 @@
       </ion-buttons>
 
       <!--Estrutura do Menu-->
-      <ion-title class=textotoolbar>Menu Principal</ion-title>
+      <ion-title class=textotoolbar>Menu | Usuario</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content>
     <ion-list>
 
-      <ion-item Href="/exibir-promocao">
+      <ion-item Href="/promocao-usuario">
         <ion-icon name="cart" slot="start"></ion-icon>
-        Gerenciar Promoções
+        Promoções
       </ion-item>
 
-      <ion-item Href="/cardapiocomidas">
+      <ion-item Href="/cardapio-comidas-usuario">
         <ion-icon name="restaurant" slot="start"></ion-icon>
-        Gerenciar Cardápio
+        Cardápios
       </ion-item>
 
-      
       <ion-item>
         <ion-icon name="star" slot="start"></ion-icon>
-        Gerenciar   Filiais
+        Filiais
       </ion-item>
 
       <ion-item href="/contato" >
         <ion-icon name="mail" slot="start"></ion-icon>
-        Gerenciar Contato
+        Contato
       </ion-item>
 
-      <ion-item href="/home-usuario" >
-        <ion-icon name="mail" slot="start"></ion-icon>
-        Modo Usuário
-      </ion-item>
-
-
-      <ion-item (onClick)="logout()">
+      <ion-button (onClick)="logout()">
         <ion-icon name="close" slot="start"></ion-icon>
         Sair
-      </ion-item>
+      </ion-button>
 
-      
-    </ion-list>
+          </ion-list>
   </ion-content>
 
 </ion-menu>

@@ -1,35 +1,29 @@
-import { HeaderComponent } from './../../components/header/header.component';
 
-import { Http } from '@angular/http';
-import { Component, OnInit, SystemJsNgModuleLoaderConfig } from '@angular/core';
-import { NavController, ToastController, LoadingController, MenuController } from '@ionic/angular';
+import { Component, OnInit } from '@angular/core';
+import { HeaderComponent } from 'src/app/components/header/header.component';
 import { Subscription } from 'rxjs';
-import { AuthService } from 'src/app/services/auth.service';
-import { Promocao } from 'src/app/interfaces/promocao';
-import { PromocaoService } from 'src/app/services/promocao.service';
 
+import { NavController, LoadingController, ToastController } from '@ionic/angular';
+import { Http } from '@angular/http';
+import { AuthService } from 'src/app/services/auth.service';
+import { PromocaoService } from 'src/app/services/promocao.service';
+import { Promocao } from 'src/app/interfaces/promocao';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.page.html',
-  styleUrls: ['./home.page.scss'],
+  selector: 'app-promocao-usuario',
+  templateUrl: './promocao-usuario.page.html',
+  styleUrls: ['./promocao-usuario.page.scss'],
 })
-export class HomePage implements OnInit {
-    
-  
+export class PromocaoUsuarioPage implements OnInit {
   private loading: any;
-  private promocaoId: string = null;
+  public cordestaque: string;
   public promocao = new Array<Promocao>();
   private promocaoSubscription: Subscription;
   public categoria = 'Promoção';
   public criterioHeader:HeaderComponent;
-  
-  
 
-   
-
-  constructor(private menu: MenuController,
-    public navCtrl: NavController,
+  
+  constructor(public navCtrl: NavController,
     public http: Http,
     private authService: AuthService,
     private loadingCtrl: LoadingController,
@@ -40,22 +34,23 @@ export class HomePage implements OnInit {
 
   }
 
-  ngOnInit() {this.menuAdmin(); }
+  ngOnInit() { }
 
   ngOnDestroy() {  
     this.promocaoSubscription.unsubscribe();
    }
 
-   menuAdmin() {
-    this.menu.enable(true, 'admin');
-  }
-
-   toggleMenu(){
-    this.menu.toggle();
-  }
+ 
   
   tornarDestaque(id,a:Promocao){
-        a.destaque = "sim";
+        if (a.destaque=="sim"){
+        a.destaque = "não";
+        a.textobotaodedestaque="Destacar";
+        }else {
+          a.destaque="sim";
+          a.textobotaodedestaque="Remover Destaque";
+        }
+
         this.promocaoService.updatePromocao(a.id,a);
   }
  
@@ -63,6 +58,7 @@ export class HomePage implements OnInit {
     //Array promocao recebendo os dados do banco.
     this.promocaoSubscription = this.promocaoService.getPromocoes().subscribe(data => {
     this.promocao = data;
+    
 
     
     // Ordernando o array pelo titulo
@@ -109,7 +105,7 @@ export class HomePage implements OnInit {
     async deletePromocao(id: string) {
       try {
         await this.promocaoService.deletePromocao(id);
-        this.presentToast('Produto Deletado');
+        this.presentToast('Promoção Deletada');
       } catch (error) {
         this.presentToast('Erro ao tentar deletar');
       }

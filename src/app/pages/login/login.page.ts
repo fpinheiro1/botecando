@@ -44,6 +44,7 @@ export class LoginPage implements OnInit {
 
     try {
       await this.authService.register(this.userRegister);
+      
     } catch (error) {
       this.presentToast(error.message);
     } finally {

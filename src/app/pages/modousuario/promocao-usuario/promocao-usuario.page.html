@@ -1,0 +1,63 @@
+<app-header titulo="Promoções"></app-header>
+
+<div></div>
+
+<div>
+  <ion-toolbar class="toolbar-color-categoria" >
+    <div class="divcentralizar">
+   
+      
+      <ion-label class="item">Nossas Promoções em Andamento</ion-label>
+      
+  
+    </div>
+  </ion-toolbar>
+
+</div>
+
+<ion-content>
+
+  <span *ngFor="let promo of promocao">
+
+    <div *ngIf="promo.categoria==categoria">
+
+      <ion-list>
+
+        <!-- ADICIONADO UM CARTAO PARA APARECER NO FORMATO DE LISTA -->
+
+        <ion-card>
+
+          <!-- FOTO DO CARDAPIO OU PRODUTO EM PROMOCAO -->
+          <!-- <img src="https://source.unsplash.com/random/400x100" alt=""> -->
+
+          <!-- ITENS DA LISTA -->
+          <ion-item>
+            
+            <ion-thumbnail slot="start">
+
+              <img src="https://source.unsplash.com/random/100x100" alt="">   
+
+            </ion-thumbnail>
+
+            <!-- TITULO DA PROMOCAO -->
+            <ion-label>{{promo.titulo}}</ion-label>
+            <!-- BOTAO PARA ABRIR UM POPUP E VISUALIZAR DETALHES DA PROMOCAO -->
+           
+          </ion-item>
+        
+          <ion-card-content>
+
+            <!-- DESCRICAO DA PROMOCAO -->
+            <ion-label>{{promo.descricao}}</ion-label>
+                        
+          </ion-card-content>
+         
+          
+        </ion-card>
+       
+       
+      </ion-list>
+    </div>
+  </span>
+  
+</ion-content>
