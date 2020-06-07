@@ -106,7 +106,7 @@ export class ExibirPromocaoPage implements OnInit {
     async deletePromocao(id: string) {
       try {
         await this.promocaoService.deletePromocao(id);
-        this.presentToast('Produto Deletado');
+        this.presentToast('Promoção Deletada');
       } catch (error) {
         this.presentToast('Erro ao tentar deletar');
       }

@@ -3,7 +3,14 @@
 <div></div>
 
 <div>
-  <ion-toolbar class="toolbar-color-categoria">
+  <ion-toolbar class="toolbar-color-categoria" >
+    <div class="divcentralizar">
+    <ion-chip routerLink="/publicar-promocao" class="btcategoriacardapio" collapse="true">
+      <ion-icon class="item" color=#ffffff name="add-outline"></ion-icon>
+      <ion-label>Adicionar Promoção</ion-label>
+    
+    </ion-chip>
+    </div>
   </ion-toolbar>
 
 </div>
@@ -35,16 +42,23 @@
             <!-- TITULO DA PROMOCAO -->
             <ion-label>{{promo.titulo}}</ion-label>
             <!-- BOTAO PARA ABRIR UM POPUP E VISUALIZAR DETALHES DA PROMOCAO -->
-            <ion-button fill="clear" color="primary" slot="end" (click)="tornarDestaque(promo.id,promo)" >View</ion-button>
+           
           </ion-item>
         
           <ion-card-content>
 
             <!-- DESCRICAO DA PROMOCAO -->
             <ion-label>{{promo.descricao}}</ion-label>
+            <br>
+            <ion-button fill="clear" color="warning" slot="end" (click)="tornarDestaque(promo.id,promo)" >{{promo.textobotaodedestaque}}</ion-button>
+            <ion-button fill="clear" color="warning" slot="end" (click)="deletePromocao(promo.id)" >Excluir</ion-button>
 
           </ion-card-content>
+         
+          
         </ion-card>
+
+       
         
         <!-- <ion-item-sliding>
 
@@ -66,5 +80,9 @@
       </ion-list>
     </div>
   </span>
-
+  <ion-fab  routerLink="/publicar-promocao" vertical="bottom" horizontal="end" slot="fixed" color="warning">
+    <ion-fab-button  color="warning">
+      <ion-icon color="medium" name="add"></ion-icon>
+     </ion-fab-button>
+    </ion-fab>
 </ion-content>
