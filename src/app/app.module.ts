@@ -11,12 +11,20 @@ import { StatusBar } from "@ionic-native/status-bar/ngx";
 
 import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
+
+/* IMPORTANDO A EXTENSAO DO FIREBASE NO APP */
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireDatabase } from "@angular/fire/database";
 import { HttpModule, Http } from "@angular/http";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
+
+/* IMPORTANDO PARA REALIZAR AUTENTICACAO */
 import { AngularFireAuthModule } from "@angular/fire/auth";
 
+/* IMPORTANDO O STORAGE FIREBASE PARA ADD IMAGENS */
+import { AngularFireStorageModule } from "@angular/fire/storage";
+/* import { File } from "@ionic-native/file/ngx";
+ */
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -26,7 +34,7 @@ import { AngularFireAuthModule } from "@angular/fire/auth";
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-
+    AngularFireStorageModule,
     IonicModule.forRoot(),
     AppRoutingModule,
     ComponentsModule,
@@ -36,7 +44,6 @@ import { AngularFireAuthModule } from "@angular/fire/auth";
     SplashScreen,
     AngularFireModule,
     AngularFireDatabase,
-
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],
   bootstrap: [AppComponent],

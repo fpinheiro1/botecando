@@ -6,14 +6,9 @@
       <ion-button (click)="toggleMenu()">
         <ion-icon slot="icon-only" name="menu"></ion-icon>
       </ion-button>
-      <ion-title class="textotoolbar"> Inicio - Admistrador</ion-title>
+      <ion-title class="textotoolbar"> Promoções em destaque</ion-title>
 
     </ion-buttons>
-  </ion-toolbar>
-
-
-  <ion-toolbar class="toolbar-color-categoria">
-    <ion-title class="textotoolbarhome2">Promoções em Destaque</ion-title>
   </ion-toolbar>
 
 </ion-header>
@@ -27,33 +22,34 @@
       <div *ngIf="promo.destaque=='sim'">
 
 
-        <ion-list>    
+        <ion-list>
 
           <!-- ADICIONADO UM CARTAO PARA APARECER NO FORMATO DE LISTA -->
 
-        <ion-card>
+          <ion-card>
 
-          <!-- FOTO DO CARDAPIO OU PRODUTO EM PROMOCAO -->
-          <img src="https://source.unsplash.com/random/400x100" alt=""> 
+            <!-- FOTO DO CARDAPIO OU PRODUTO EM PROMOCAO -->
+            <img src="https://source.unsplash.com/random/400x100" alt="">
 
-          <!-- ITENS DA LISTA -->
-          <ion-item>
-            
-            <!-- TITULO DA PROMOCAO -->
-            <ion-label>{{promo.titulo}}</ion-label>
-            <!-- BOTAO PARA ABRIR UM POPUP E VISUALIZAR DETALHES DA PROMOCAO -->
-            <ion-button fill="clear" color="primary" slot="end" (click)="tornarDestaque(promo.id,promo)" >View</ion-button>
-          </ion-item>
-        
-          <ion-card-content>
+            <!-- ITENS DA LISTA -->
+            <ion-item>
 
-            <!-- DESCRICAO DA PROMOCAO -->
-            <ion-label>{{promo.descricao}}</ion-label>
+              <!-- TITULO DA PROMOCAO -->
+              <ion-label>{{promo.titulo}}</ion-label>
+              <!-- BOTAO PARA ABRIR UM POPUP E VISUALIZAR DETALHES DA PROMOCAO -->
+              <ion-button fill="clear" color="primary" slot="end" (click)="tornarDestaque(promo.id,promo)">View
+              </ion-button>
+            </ion-item>
 
-          </ion-card-content>
-        </ion-card>
-                  
-         <!--  <ion-item-sliding>
+            <ion-card-content>
+
+              <!-- DESCRICAO DA PROMOCAO -->
+              <ion-label>{{promo.descricao}}</ion-label>
+
+            </ion-card-content>
+          </ion-card>
+
+          <!--  <ion-item-sliding>
 
             <ion-item class="itemcardapio">
               <ion-label>{{promo.titulo}}</ion-label><br>

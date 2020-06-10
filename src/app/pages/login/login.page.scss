@@ -1,56 +1,57 @@
+*{
+    font-family: helvetica, sans-serif;
+}
+
 .container {
     position: absolute;
     left: 0;
     right: 0;
-    width: 75%;
+    width: 70%;
     margin: 0 auto;
     z-index: 2;
-    
 
     &.top {
-        top: 5%;
+        top: 10%;
     }
 
-    .titulo{
+    .subtitulo {
+        margin: 0px;
         text-align: center;
-        text-transform: uppercase;
-        color: #ffffff;
-        opacity: 60%;
-        
+        color: #F8F7FF;
+        font-size: 13px;
+        font-family: helvetica, sans-serif;
     }
 
-    &.bottom {
-        bottom: 30%;
-
-        span {
-            color: #fff;
-        }
+    .titulo {
+        text-align: center;
+        color: #F8F7FF;
+        font-family: helvetica, sans-serif;
+        padding-bottom: 20px;
     }
+
 }
 
-
-
-
 ion-slides {
-    
+
     height: 100%;
 
     .slide-inner {
-        width: 75%;
-        color: #fff;
-        background-color: rgba(255, 255, 255, 0.2);
-        border-radius: 10px;
+        width: 80%;
+        color: #F8F7FF;
 
         ion-item {
-            --background: #590000;
-            --border-radius: 10px;
+            --background: #fff;
+            --border-radius: 5px;
 
             ion-input {
-                --color: #fff;
+                --color: black;
+                font-size: 14px;
             }
         }
     }
 }
+
+/* TEMA PRINCIPAL */
 
 .ocean {
     position: absolute;
@@ -58,45 +59,29 @@ ion-slides {
     right: 0;
     bottom: 0;
     height: 100%;
-    background-color: #590000;
+    background-color: #b02a40;
+    background-image: linear-gradient(135deg, #b02a40 11%, #f51c3e 45%, #781717 100%);
 
-    .waves {
-        position: absolute;
-        top: -100px;
-        left: 0;
-        right: 0;
-        height: 100px;
-       
-        background-size: contain;
-        transition: all 0.5s;
-        background-color: #590000;
-    }
 }
 
 .btsegmento {
-       
-        background-color: rgba(255, 255, 255, 0.281);
-        border-radius: 10px;
-  
-  }
+    background-color: #F8F7FF;
+}
 
- .segmentos {
-    --color:rgba(255, 255, 255, 0.623);;
-    --border-width:2px;
-    border-radius: 40%;
+.segmentos {
+    --color: #F51C3E;
+    --border-width: 2px;
+    --background-focused: #F8F7FF;
+    --color-checked: #F8F7FF;
+    --indicator-color: #F51C3E;
+    font-weight: bold;
+}
 
+.icone-login{
     
-    --background-focused:blue;
-    --color-checked:rgba(255, 255, 255, 0.425);
-    --indicator-color:#590000bb;
-    
+}
 
-
- }
-
-
-
- .tituloslide {
-     color:rgba(255, 255, 255, 0.623);
-     
- }
+.login-botao{
+    color: whitesmoke;
+    font-weight: bolder;
+}

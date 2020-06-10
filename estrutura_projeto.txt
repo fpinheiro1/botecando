@@ -44,4 +44,6 @@ app CLIENTE 02
 
 
 
-    - 
+    CORES DO PROJETO
+
+    - FF0035 - VERMELHO PRINCIPAL

@@ -9,13 +9,13 @@
       <ion-slide>
 
         <ion-chip routerLink="/cardapiocomidas" class="btcategoriacardapio" collapse="true">
-          <ion-icon class="item" color=#ffffff name="restaurant-outline"></ion-icon>
-          <ion-label>Ver Comidas</ion-label>
+          <ion-icon class="item" name="restaurant-outline"></ion-icon>
+          <ion-label>Comidas</ion-label>
         </ion-chip>
 
         <ion-chip class="btcategoriacardapio" collapse="true">
           <ion-icon class="item" color="light" name="wine-outline"></ion-icon>
-          <ion-label color="light">Ver Bebidas</ion-label>
+          <ion-label color="light">Bebidas</ion-label>
         </ion-chip>
       </ion-slide>
 
@@ -75,14 +75,14 @@ de acordo com a funçao selecionarCriterio() -->
             <ion-label>{{publi.descricao}}</ion-label>
           </ion-item> -->
 
-          <ion-item  class="itemcardapio1">
+          <ion-item class="itemcardapio1">
             <ion-avatar slot="start">
               <img src="https://source.unsplash.com/random/100x100">
             </ion-avatar>
-            <ion-label >
+            <ion-label>
               <h2 color="warning">{{publi.titulo}}</h2>
-              <h5 color="warning" >{{publi.subtitulo}}</h5>
-              <p color="warning" >{{publi.descricao}}</p>
+              <h5 color="warning">{{publi.subtitulo}}</h5>
+              <p color="warning">{{publi.descricao}}</p>
             </ion-label>
           </ion-item>
 
@@ -94,9 +94,9 @@ de acordo com a funçao selecionarCriterio() -->
       </ion-list>
     </div>
   </span>
-  <ion-fab  routerLink="/publicar-bebidas" vertical="bottom" horizontal="end" slot="fixed" color="warning">
-    <ion-fab-button  color="warning">
-      <ion-icon color="medium" name="add"></ion-icon>
-     </ion-fab-button>
-    </ion-fab>
+  <ion-fab routerLink="/publicar-bebidas" vertical="bottom" horizontal="end" slot="fixed" color="warning">
+    <ion-fab-button>
+      <ion-icon color="medium" class="icon-color" name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

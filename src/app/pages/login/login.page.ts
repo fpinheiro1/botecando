@@ -39,12 +39,12 @@ export class LoginPage implements OnInit {
     }
   }
 
+  /* REGISTRANDO USUARIO */
   async register() {
     await this.presentLoading();
 
     try {
       await this.authService.register(this.userRegister);
-      
     } catch (error) {
       this.presentToast(error.message);
     } finally {
@@ -64,8 +64,9 @@ export class LoginPage implements OnInit {
     }
   }
 
+  /* ADICIONAR O CARREGANDO DO LOGIN */
   async presentLoading() {
-    this.loading = await this.loadingCtrl.create({ message: "Aguarde..." });
+    this.loading = await this.loadingCtrl.create({ message: 'Por favor, aguarde...' });
     return this.loading.present();
   }
 

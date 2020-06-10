@@ -55,7 +55,7 @@
 
 <ion-content class="corpo">
 
-   <!-- List of Sliding Items -->
+  <!-- List of Sliding Items -->
 
   <span *ngFor="let publi of publicacao">
 
@@ -65,20 +65,20 @@
 
       <ion-list>
         <ion-item-sliding>
-         <!-- <ion-item class="itemcardapio">
+          <!-- <ion-item class="itemcardapio">
             <ion-label>{{publi.titulo}}</ion-label><br>
             <ion-label>{{publi.subtitulo}}</ion-label>
             <ion-label>{{publi.descricao}}</ion-label>
           </ion-item> -->
 
-          <ion-item  class="itemcardapio1">
+          <ion-item class="itemcardapio1">
             <ion-avatar slot="start">
               <img src="https://source.unsplash.com/random/100x100">
             </ion-avatar>
-            <ion-label >
+            <ion-label>
               <h2 color="warning">{{publi.titulo}}</h2>
-              <h5 color="warning" >{{publi.subtitulo}}</h5>
-              <p color="warning" >{{publi.descricao}}</p>
+              <h5 color="warning">{{publi.subtitulo}}</h5>
+              <p color="warning">{{publi.descricao}}</p>
             </ion-label>
           </ion-item>
 
@@ -87,13 +87,13 @@
           </ion-item-options>
         </ion-item-sliding>
 
-       
+
       </ion-list>
     </div>
   </span>
-  <ion-fab  routerLink="/publicar-comidas" vertical="bottom" horizontal="end" slot="fixed" color="warning">
-    <ion-fab-button  color="warning">
+  <ion-fab routerLink="/publicar-comidas" vertical="bottom" horizontal="end" slot="fixed" color="warning">
+    <ion-fab-button color="warning">
       <ion-icon color="medium" name="add"></ion-icon>
-     </ion-fab-button>
-    </ion-fab>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

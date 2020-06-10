@@ -26,25 +26,24 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+/* PERSONALIZACAO DA TOOLBAR */
 
 .toolbar-color {
 
-    --ion-background-color: #590000;
-    --ion-toolbar-color: #ffffff;
-
+    --ion-background-color: #b02a40;
+    --ion-background-image: linear-gradient(135deg, #b02a40 11%, #f51c3e 45%, #781717 100%);
+    --ion-toolbar-color: #F8F7FF;
+    font-family: helvetica, sans-serif;
+    font-size: 10px;
     background-origin: padding-box;
-
 
     .item {
         opacity: 100%;
     }
-
-
 }
 
 .textotoolbar {
-    --ion-text-color: #ffffff;
-    opacity: 60%;
+    --ion-text-color: #F8F7FF;
     align-items: center;
 
 }
@@ -75,8 +74,7 @@
 }
 
 .textobtsubcategoria {
-
-
+    
     opacity: 80%;
 
 }
@@ -134,7 +132,7 @@
     border-collapse: separate;
     border-color: #590000;
 
-   
+
     color: warning;
 
     border-left-style: groove;
@@ -145,9 +143,9 @@
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
 
-   --background:#e6e4e4;
+    --background: #e6e4e4;
 
-   
+
 
     opacity: 90%;
 
@@ -179,6 +177,16 @@
 
 .divcentralizar {
     text-align: center;
-    vertical-align:middle;
-    display:table-cell;
-    }
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.icon-color{
+    color: #F8F7FF;
+}
+
+.botao-promocao{
+    background-color: #F51C3E;
+    color: #F8F7FF;
+    font-weight: bolder;;
+}

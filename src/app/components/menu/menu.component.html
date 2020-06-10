@@ -1,11 +1,11 @@
-<ion-menu side="start" menu-id="admin" content-id="main" contentId="principal">
+<ion-menu side='start' menu-id='admin' content-id='main' contentId='principal'>
   <ion-header>
-    <ion-toolbar class="toolbar-color">
+    <ion-toolbar class='toolbar-color'>
 
       <!-- Botão Fechar Menu-->
-      <ion-buttons slot="start">
-        <ion-button (click)="closeMenu()">
-          <ion-icon slot="icon-only" name="menu"></ion-icon>
+      <ion-buttons slot='start'>
+        <ion-button (click)='closeMenu()'>
+          <ion-icon slot='icon-only' name='menu'></ion-icon>
         </ion-button>
       </ion-buttons>
 
@@ -17,35 +17,35 @@
   <ion-content>
     <ion-list>
 
-      <ion-item Href="/exibir-promocao">
-        <ion-icon name="cart" slot="start"></ion-icon>
+      <ion-item Href='/exibir-promocao'>
+        <ion-icon name='cart' slot='start'></ion-icon>
         Gerenciar Promoções
       </ion-item>
 
-      <ion-item Href="/cardapiocomidas">
-        <ion-icon name="restaurant" slot="start"></ion-icon>
+      <ion-item Href='/cardapiocomidas'>
+        <ion-icon name='restaurant' slot='start'></ion-icon>
         Gerenciar Cardápio
       </ion-item>
 
       
       <ion-item>
-        <ion-icon name="star" slot="start"></ion-icon>
+        <ion-icon name='star' slot='start'></ion-icon>
         Gerenciar   Filiais
       </ion-item>
 
-      <ion-item href="/contato" >
-        <ion-icon name="mail" slot="start"></ion-icon>
+      <ion-item href='/contato' >
+        <ion-icon name='mail' slot='start'></ion-icon>
         Gerenciar Contato
       </ion-item>
 
-      <ion-item href="/home-usuario" >
-        <ion-icon name="mail" slot="start"></ion-icon>
+      <ion-item href='/home-usuario' >
+        <ion-icon name='mail' slot='start'></ion-icon>
         Modo Usuário
       </ion-item>
 
 
-      <ion-item (onClick)="logout()">
-        <ion-icon name="close" slot="start"></ion-icon>
+      <ion-item (onClick)='logout()'>
+        <ion-icon name='close' slot='start'></ion-icon>
         Sair
       </ion-item>
 

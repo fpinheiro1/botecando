@@ -1,41 +1,53 @@
 <ion-header>
-  <ion-toolbar>
+
+  <ion-toolbar class="toolbar-color">
     <ion-buttons slot="start">
+
       <!-- BOTAO PARA RETORNAR -->
       <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
     <ion-title>Adicionar Promoção</ion-title>
   </ion-toolbar>
+
 </ion-header>
 
 <ion-content class="ion-padding">
 
   <ion-list>
+    <!-- TITULO DA PROMOCAO -->
+    <ion-item>
+      <ion-label position="floating">Titulo</ion-label>
+      <ion-input type="text" [(ngModel)]="promocao.titulo"></ion-input>
+    </ion-item>
 
+    <!-- FOTO PROMO -->
+    <ion-item>
+      <ion-label>Foto</ion-label>
+      <ion-input type="file" [id]="pic"></ion-input>
+    </ion-item>
 
+    <!-- 
     <ion-item>
-      <ion-input type="text" [(ngModel)]="promocao.titulo" placeholder="Titulo"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input type="text" [(ngModel)]="promocao.subtitulo" placeholder="Subtitulo"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input type="text" [(ngModel)]="promocao.urlfoto" placeholder="Foto"></ion-input>
-    </ion-item>
-    <ion-item>
+      <ion-label position="floating">Descrição</ion-label>
+      <label class="item item-input">
+        <textarea placeholder="Comments"></textarea>
+      </label>
       <ion-input type="text" [(ngModel)]="promocao.descricao" placeholder="Descrição"></ion-input>
+    </ion-item> -->
+
+    <!-- DESCRICAO -->
+
+    <ion-item>
+      <ion-label position="floating">Descrição</ion-label>
+      <ion-textarea rows="6" cols="20" placeholder="Uma breve descrição ..." [(ngModel)]="promocao.descricao"></ion-textarea>
     </ion-item>
-
-
 
   </ion-list>
 
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar>
-    <ion-button (click)="saveProduct()" expand="block">
-      Salvar
-    </ion-button>
-  </ion-toolbar>
+  <ion-button color="danger" class="botao-promocao" (click)="saveProduct()" expand="block">
+    <ion-label>Salvar</ion-label>
+  </ion-button> 
 </ion-footer>
