@@ -12,6 +12,14 @@
 
     &.top {
         top: 10%;
+
+    &.bottom {
+        bottom: 40%;
+    }
+
+    span {
+        color: #fff;
+    }
     }
 
     .subtitulo {
